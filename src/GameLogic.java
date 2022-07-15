@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class GameLogic {
 
-    int n = 5;
+    int n = 7;
     int [][]fieldsArr = new int[n][n];      //1 represents alive cell
     int [][]aliveNeighbours = new int[n][n];
 
@@ -49,37 +49,37 @@ public class GameLogic {
             for(int j = 0; j < fieldsArr[i].length; j++){
 
                 //check top left neighbour
-                if((i-1 >=0 && j-1 >=0) && (j-1 < fieldsArr[i].length)){
+                if((i-1 >=0 && j-1 >=0) && (i-1 < fieldsArr[i].length && j-1 < fieldsArr[i].length)){
                     if(fieldsArr[i-1][j-1] == 1) {
                         aliveNeighbours[i][j] += 1;
                     }
                 }
                 //check top middle neighbour
-                if((i-1 >=0) && (j < fieldsArr[i].length)){
+                if(i - 1 >= 0 && i-1 < fieldsArr[i].length && j < fieldsArr[i].length){
                     if(fieldsArr[i-1][j] == 1) {
                         aliveNeighbours[i][j] += 1;
                     }
                 }
                 //check top right neighbour
-                if((i-1 >=0) && ( j+1 < fieldsArr[i].length)){
+                if((i-1 >=0) && (i-1 < fieldsArr[i].length && j+1 < fieldsArr[i].length)){
                     if(fieldsArr[i-1][j+1] == 1) {
                         aliveNeighbours[i][j] += 1;
                     }
                 }
                 //check middle left neighbour
-                if((j-1 >=0) && (j-1 < fieldsArr[i].length)){
+                if(j - 1 >= 0 && i < fieldsArr[i].length && j - 1 < fieldsArr[i].length){
                     if(fieldsArr[i][j-1] == 1) {
                         aliveNeighbours[i][j] += 1;
                     }
                 }
                 //check middle right neighbour
-                if(j+1 < fieldsArr[i].length){
+                if(i < fieldsArr[i].length && j + 1 < fieldsArr[i].length){
                     if(fieldsArr[i][j+1] == 1) {
                         aliveNeighbours[i][j] += 1;
                     }
                 }
                 //check bottom left neighbour
-                if((j-1 >=0) && (i+1 < fieldsArr.length && j-1 < fieldsArr[i].length)){
+                if((j-1 >= 0) && (i+1 < fieldsArr.length && j-1 < fieldsArr[i].length)){
                     if(fieldsArr[i+1][j-1] == 1) {
                         aliveNeighbours[i][j] += 1;
                     }
