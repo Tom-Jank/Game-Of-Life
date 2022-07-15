@@ -1,17 +1,49 @@
+import java.util.Random;
+
 public class GameLogic {
 
+    int n = 5;
+    int [][]fieldsArr = new int[n][n]; //1 represents who is alived
+    int [][]aliveNeighbours = new int[n][n];
 
-    int [][]fieldsArr = {{0,0,0,0},{0,1,1,1},{0,0,1,0},{0,0,1,0}}; //1 represents who is alived
-    int [][]aliveNeighbours = {{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0}};
-
+    GameLogic(){
+        createFieldsArr();
+        generateRandomFieldsArr();
+    }
     public void game(){
-        fillAliveNaighbours();
+        createAliveNeighbours();
+        fillAliveNeighbours();
         generateNewGeneration();
     }
 
 
+    private void createFieldsArr(){
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                fieldsArr[i][j] = 0;
+            }
+        }
+    }
+    private void createAliveNeighbours(){
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                aliveNeighbours[i][j] = 0;
+            }
+        }
+    }
+
+    private void generateRandomFieldsArr(){
+        Random rand = new Random();
+
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                fieldsArr[i][j] = rand.nextInt(2);
+            }
+        }
+    }
+
     //function which count how many alive neighbours every field has
-    private void fillAliveNaighbours(){
+    private void fillAliveNeighbours(){
         //check how many alive neighbours has and count it
         // this long eight if checks that we are not out of range
         for(int i = 0; i < fieldsArr.length; i++){

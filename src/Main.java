@@ -3,5 +3,6 @@ public class Main {
         System.out.println("Fork test!!!");
         GameLogic game = new GameLogic();
         game.game();
+        game.game();
     }
 }
