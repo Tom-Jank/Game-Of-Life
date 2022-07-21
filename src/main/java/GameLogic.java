@@ -1,4 +1,7 @@
+package main.java;
+
 import java.util.Random;
+import java.util.Scanner;
 
 public class GameLogic {
 
@@ -115,7 +118,7 @@ public class GameLogic {
     private void generateNewGeneration(){
 
         System.out.println("==============================");
-        drawGeneration();
+        DrawingSimulProgress.drawGeneration(fieldsArr);
 
         for(int i = 0; i < fieldsArr.length; i++){
             for(int j = 0; j < fieldsArr[i].length; j++){
@@ -147,23 +150,9 @@ public class GameLogic {
             }
         }
     }
-
-    private void drawGeneration() {
-        for (int[] ints : fieldsArr) {
-            for (int anInt : ints) {
-                if(anInt == 0)
-                    System.out.print(anInt + " ");
-                else
-                    System.out.print("*" + " ");
-//                System.out.print(anInt);
-            }
-            System.out.println();
-        }
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+    public char stopSimulation() {
+        Scanner sc = new Scanner(System.in);
+        return sc.nextLine().charAt(0);
     }
 
 }
