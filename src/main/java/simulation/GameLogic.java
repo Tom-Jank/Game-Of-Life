@@ -76,16 +76,6 @@ public class GameLogic implements SimulData {
 
             }
         }
-        /*
-        System.out.println("===============Tablica z liczbą żywych sąsiadów===============");
-        for(int i = 0; i < fieldsArr.length; i++){
-            for(int j = 0; j < fieldsArr[i].length; j++){
-                System.out.print(aliveNeighbours[i][j] + "  ");
-            }
-            System.out.println();
-        }
-        */
-
     }
 
     //function which base on aliveNeihbours array decide which fields will be alive in new generation
