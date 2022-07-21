@@ -2,6 +2,7 @@ package main.java;
 
 public class DrawingSimulProgress {
     public static void drawGeneration(int[][] fieldsArr) {
+        System.out.println("==============================");
         for (int[] ints : fieldsArr) {
             for (int anInt : ints) {
                 if(anInt == 0)
