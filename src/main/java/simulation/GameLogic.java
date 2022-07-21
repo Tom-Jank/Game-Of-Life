@@ -4,7 +4,7 @@ This class is responsible for working on already running simulation and creating
 
 package main.java.simulation;
 
-import main.resources.SimulData;
+import main.java.interfaces.SimulData;
 import main.java.drawing.DrawingSimulProgress;
 
 public class GameLogic implements SimulData {

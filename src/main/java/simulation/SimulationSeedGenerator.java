@@ -3,7 +3,7 @@ This class is responsible for generating the seed of a simulation (initial value
  */
 package main.java.simulation;
 
-import main.resources.SimulData;
+import main.java.interfaces.SimulData;
 import java.util.Random;
 
 public class SimulationSeedGenerator implements SimulData {
