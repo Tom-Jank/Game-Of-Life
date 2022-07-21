@@ -1,5 +1,4 @@
-package main.java;
-
+package main.java.simulation;
 import java.io.IOException;
 
 public class Main {

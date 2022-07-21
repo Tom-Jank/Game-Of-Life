@@ -1,6 +1,13 @@
-package main.java;
+/*
+This class is responsible for working on already running simulation and creating new life.
+ */
 
-public class GameLogic implements SimulData{
+package main.java.simulation;
+
+import main.resources.SimulData;
+import main.java.drawing.DrawingSimulProgress;
+
+public class GameLogic implements SimulData {
 
     GameLogic(){
         SimulationSeedGenerator.createFieldsArr();

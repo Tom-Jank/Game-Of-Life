@@ -1,7 +1,9 @@
-package main.java;
+/*
+This class is responsible for running the simulation.
+ */
+package main.java.simulation;
 
 import java.io.IOException;
-import java.util.Scanner;
 
 public class SimulationStarter {
     public static void runningSimulation() throws IOException {

@@ -1,4 +1,8 @@
-package main.java;
+/*
+This class is responsible for drawing simulation progress in console.
+ */
+
+package main.java.drawing;
 
 public class DrawingSimulProgress {
     public static void drawGeneration(int[][] fieldsArr) {
@@ -8,8 +12,7 @@ public class DrawingSimulProgress {
                 if(anInt == 0)
                     System.out.print("░" + " ");
                 else
-                    System.out.print("█" + " ");//▄█
-//                System.out.print(anInt);
+                    System.out.print("█" + " ");
             }
             System.out.println();
         }
