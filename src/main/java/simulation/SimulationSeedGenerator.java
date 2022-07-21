@@ -1,9 +1,9 @@
 /*
 This class is responsible for generating the seed of a simulation (initial value of an array)
  */
-package main.java.simulation;
+package simulation;
 
-import main.java.interfaces.SimulData;
+import interfaces.SimulData;
 import java.util.Random;
 
 public class SimulationSeedGenerator implements SimulData {

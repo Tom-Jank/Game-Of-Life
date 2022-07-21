@@ -2,7 +2,7 @@
 This class is responsible for drawing simulation progress in console.
  */
 
-package main.java.drawing;
+package drawing;
 
 public class DrawingSimulProgress {
     public static void drawGeneration(int[][] fieldsArr) {

@@ -2,10 +2,10 @@
 This class is responsible for working on already running simulation and creating new life.
  */
 
-package main.java.simulation;
+package simulation;
 
-import main.java.interfaces.SimulData;
-import main.java.drawing.DrawingSimulProgress;
+import interfaces.SimulData;
+import drawing.DrawingSimulProgress;
 
 public class GameLogic implements SimulData {
 
